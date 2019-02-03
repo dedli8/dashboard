@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'settings';
+@import 'mixins';
+@import "fonts";
+
+body{
+  background-color: #282828;
+}
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+@import "../../components/header/_header";
+@import "../../components/banner/_banner";
+@import "../../components/sciences/_sciences";
+@import "../../components/sciences/scienceitem/_scienceitem";
+@import "../../components/feedbackcontacts/_feedbackcontacts";
+@import "../../components/feedbackcontacts/_feedbackcontacts";
+@import "../../components/feedbackcontacts/contacts/__contacts";
+@import "../../components/feedbackcontacts/feedbackform/__feedbackform";
