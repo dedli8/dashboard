@@ -1,0 +1,114 @@
+.header{
+  background-color: #f1f1f1;
+  padding: 28px 30px;
+  display: flex;
+  justify-content: space-between;
+  .refresh-wrap{
+    .btn-refresh{
+      width: 41px;
+      margin-right: 3px;
+      height: 41px;
+      border-radius: 50%;
+      background-color: #ff503f;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      &:before {
+        content: '';
+        width: 17px;
+        height: 17px;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: url("img/refreshicon.svg") no-repeat;
+      }
+      &:hover{
+        opacity: 0.8;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotate {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+      }
+    }
+  }
+  .btn-dashboard{
+    padding: 12px 22px;
+    border: 1px solid #c8c8c8;
+    box-sizing: border-box;
+    color: #4b4b4b;
+    font-size: 16px;
+    font-family: $freight, sans-serif;
+    border-radius: 17px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .btn-more{
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: #aacc4e;
+    margin-right: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 7px;
+      height: 7px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+  .user-online-box {
+    @extend .btn-dashboard;
+    line-height: initial;
+    text-transform: uppercase;
+    padding-left: 46px;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 18px;
+      background-image: url("img/onlineicon.svg");
+      width: 18px;
+      height: 18px;
+      background-size: cover;
+
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child{
+        position: relative;
+        top: -3px;
+      }
+      &:nth-child(2){
+        margin-right: 10px;
+      }
+      &:nth-child(3) {
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        border-bottom: 2px solid #a6a6a6;
+        border-right: 2px solid #a6a6a6;
+        transform: rotate(45deg);
+        width: 7px;
+        height: 7px;
+        cursor: pointer;
+      }
+    }
+  }
+}
