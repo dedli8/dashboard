@@ -1,0 +1,88 @@
+.toggle-panel{
+  font-size: 0;
+  display: flex;justify-content: space-between;
+background-color: #f1f1f1;
+  font-family: $freight, sans-serif;
+  color: #4b4b4b;
+  border: 1px solid #dcdcdc;
+  .toggle-item{
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f8f8f8;
+    padding: 27px 70px 27px 90px;
+    //width: 268px;
+      position: relative;
+text-align: center;
+  }
+  .toggle-item-active{
+    background-color: white;
+  }
+  .toggle-item:before{
+content: '';
+    position: absolute;
+    left: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .active-project:before{
+background-image: url("img/clockicon.svg");
+    width: 40px;
+    height: 40px;
+  }
+  .messenger{
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+  &:before{
+    background-image: url("img/messagesicon.svg");
+    width: 45px;
+    height: 27px;
+  }
+  }
+  .messenger-num, .active-projects-num{
+    right: 40px;
+    top: 15px;
+  }
+  .active-projects-num{
+    background-color: #adadad;
+  }
+  .toggle-panel-search{
+    height: 78px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 14%;
+    text-align: right;
+    background-color: transparent;
+    flex-grow: 2;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     font-family: $freight, sans-serif;
+      color: #c1c1c1;
+      text-align: right;
+      font-size: 22px;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+     font-family: $freight, sans-serif;
+      color: #c1c1c1;
+      text-align: right;
+      font-size: 22px;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+     font-family: $freight, sans-serif;
+      color: #c1c1c1;
+      text-align: right;
+      font-size: 22px;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+     font-family: $freight, sans-serif;
+      color: #c1c1c1;
+      text-align: right;
+      font-size: 22px;
+    }
+  }
+
+}

@@ -21,23 +21,6 @@
       margin-bottom: 46px;
     }
   }
-  %avatar-num{
-    width: 31px;
-    height: 31px;
-    position: absolute;
-    right: 21px;
-    top: 15px;
-    background-color: #ff503f;
-    color: white;
-    font-size: 16px;
-    font-family: $helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50%;
-    padding-top: 5px;
-    box-sizing: border-box;
-  }
   .top .panel-item:after{
     content: '. . .';
     color: #4d4f50;
@@ -80,8 +63,11 @@
     color: white;
   }
   .upgrade-num{
-    @extend %avatar-num;
     top: 5px;
-
   }
+  .project-num{
+    @extend .upgrade-num;
+    background-color: #adadad;
+  }
+
 }

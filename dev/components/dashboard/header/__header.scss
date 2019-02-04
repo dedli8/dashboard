@@ -3,6 +3,7 @@
   padding: 28px 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .refresh-wrap{
     .btn-refresh{
       width: 41px;
@@ -74,7 +75,6 @@
   }
   .user-online-box {
     @extend .btn-dashboard;
-    line-height: initial;
     text-transform: uppercase;
     padding-left: 46px;
     position: relative;

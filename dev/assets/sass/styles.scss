@@ -2,17 +2,40 @@
 @import 'settings';
 @import 'mixins';
 @import "fonts";
+@import "customselect";
+@import "customscroll";
 
 body{
   background-color: #282828;
 }
   .container {
     display: flex;
-    max-width: 1024px;
+    max-width: 1580px;
     margin: 0 auto;
     padding: 0 2%;
     min-height: 600px;
   }
+.num{
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  right: 21px;
+  top: 15px;
+  background-color: #ff503f;
+  color: white;
+  font-size: 16px;
+  font-family: $helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
 @import "../../components/adminpanel/_adminpanel";
 @import "../../components/dashboard/_dashboard";
 @import "../../components/dashboard/header/__header";
+@import "../../components/dashboard/togglepanel/__togglepanel";
+@import "../../components/dashboard/activeprojects/__activeprojects";
+@import "../../components/dashboard/activeprojects/projectsheader/__projectsheader";
+@import "../../components/dashboard/activeprojects/projectsbody/__projectsbody";
