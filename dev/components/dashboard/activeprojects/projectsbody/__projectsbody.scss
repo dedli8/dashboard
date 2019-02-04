@@ -1,5 +1,5 @@
 .projects-body {
-  max-height: 900px;
+  max-height: 820px;
   overflow-y: scroll;
   .readiness {
     display: inline-block;
@@ -78,11 +78,20 @@
   }
   .project-item-block {
     font-size: 0;
+    &:first-child{
+      min-width: 450px;
+    }
+    &:last-child{
+      margin-top: 3px;
+    }
+    @include media($width-mid){
+      min-width: initial;
+    }
   }
   .project-item-wrap {
     cursor: pointer;
     &:hover{
-      margin-bottom: 20px;
+      margin-bottom: 19px;
     }
     &:hover .project-item .search-btn {
       background-color: #ff503f;
@@ -105,19 +114,31 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 27.5px 30px;
+    padding: 5px 10px;
+    flex-wrap: wrap;
     box-sizing: border-box;
+    height: 90px;
+    @include media($width-mid){
+      padding: 27.5px 30px;
+    }
   }
   .project-item-info-wrap {
     display: none;
   }
   .project-item-info {
     border-bottom: 1px solid #dcdcdc;
-    padding: 23.5px 30px;
     background-color: #f8f8f8;
+    padding: 5px 10px;
+    height: 80px;
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    @include media($width-mid){
+      padding: 23.5px 30px;
+    }
+
     .readiness {
       background-color: transparent;
       color: #bebebe;
@@ -144,38 +165,15 @@
         top: 50%;
         transform: translateY(-50%);
         background-size: cover;
-        background: no-repeat url("img/refreshdateicon.svg");
+        background: no-repeat url("img/refreshdateicon.png");
         width: 12px;
         height: 13px;
+        z-index: 2;
       }
     }
     .users-block {
       display: inline-block;
       vertical-align: middle;
-      .small-avatar {
-        margin-right: 5px;
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-      .online:before, .offline:before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        background-color: #aacc4e;
-        border-radius: 50%;
-        z-index: 1;
-        top: -1px;
-        left: -2px;
-        border: 2px solid #f8f8f8;
-      }
-      .offline:before {
-        background-color: #c5c5c5;
-      }
     }
     .user-num {
       display: inline-block;

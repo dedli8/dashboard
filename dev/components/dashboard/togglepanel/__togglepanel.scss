@@ -4,7 +4,8 @@
 background-color: #f1f1f1;
   font-family: $freight, sans-serif;
   color: #4b4b4b;
-  border: 1px solid #dcdcdc;
+  border: solid #dcdcdc;
+  border-width: 1px 0 1px 0;
   .toggle-item{
     font-size: 24px;
     display: inline-block;
@@ -52,13 +53,16 @@ background-image: url("img/clockicon.svg");
     height: 78px;
     padding-top: 0;
     padding-bottom: 0;
-    padding-right: 14%;
     text-align: right;
     background-color: transparent;
     flex-grow: 2;
     outline: none;
     border: none;
     font-size: 22px;
+    padding-right: 1%;
+    @include media($width-max){
+      padding-right: 14%;
+    }
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      font-family: $freight, sans-serif;
       color: #c1c1c1;

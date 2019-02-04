@@ -1,9 +1,14 @@
 .projects-header {
-  padding: 23px 30px;
+  padding: 23px 10px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 90px;
+  box-sizing: border-box;
+  @include media($width-mid){
+    padding: 23px 30px;
+  }
   .filter-add-wrap {
     font-size: 0;
   }
@@ -31,22 +36,34 @@
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       color: #c1c1c1;
       font-family: $freight, sans-serif;
-      font-size: 22px;
+      font-size: 14px;
+      @include media($width-mid){
+        font-size: 22px;
+      }
     }
     &::-moz-placeholder { /* Firefox 19+ */
       color: #c1c1c1;
       font-family: $freight, sans-serif;
-      font-size: 22px;
+      font-size: 14px;
+      @include media($width-mid){
+        font-size: 22px;
+      }
     }
     &:-ms-input-placeholder { /* IE 10+ */
       color: #c1c1c1;
       font-family: $freight, sans-serif;
-      font-size: 22px;
+      font-size: 14px;
+      @include media($width-mid){
+        font-size: 22px;
+      }
     }
     &:-moz-placeholder { /* Firefox 18- */
       color: #c1c1c1;
       font-family: $freight, sans-serif;
-      font-size: 22px;
+      font-size: 14px;
+      @include media($width-mid){
+        font-size: 22px;
+      }
     }
   }
 }

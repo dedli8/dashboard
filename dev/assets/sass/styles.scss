@@ -12,7 +12,7 @@ body{
     display: flex;
     max-width: 1580px;
     margin: 0 auto;
-    padding: 0 2%;
+    //padding: 0 2%;
     min-height: 600px;
   }
 .num{
@@ -32,6 +32,30 @@ body{
   padding-top: 5px;
   box-sizing: border-box;
 }
+.small-avatar {
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.online:before, .offline:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #aacc4e;
+  border-radius: 50%;
+  z-index: 1;
+  top: -1px;
+  left: -2px;
+  border: 2px solid #f8f8f8;
+}
+.offline:before {
+  background-color: #c5c5c5;
+}
 @import "../../components/adminpanel/_adminpanel";
 @import "../../components/dashboard/_dashboard";
 @import "../../components/dashboard/header/__header";
@@ -39,3 +63,4 @@ body{
 @import "../../components/dashboard/activeprojects/__activeprojects";
 @import "../../components/dashboard/activeprojects/projectsheader/__projectsheader";
 @import "../../components/dashboard/activeprojects/projectsbody/__projectsbody";
+@import "../../components/dashboard/activeprojects/usersaction/__usersaction";

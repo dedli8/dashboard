@@ -1,0 +1,45 @@
+.users-action-item{
+  display: flex;
+  align-items: center;
+  padding: 25px 10px;
+  border-bottom: 1px solid #dcdcdc;
+ height: 90px;
+  box-sizing: border-box;
+  @include media($width-mid){
+    padding: 25px 28px;
+  }
+  &:last-child{
+    border-bottom: none;
+  }
+  .user-info{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: $freight, sans-serif;
+    .user-name{
+      display: inline-block;
+      vertical-align: middle;
+      color: #4b4b4b;
+    }
+    .user-action{
+      display: inline-block;
+      vertical-align: middle;
+      color: #bebebe;
+      font-weight: 300;
+    }
+    .user-date{
+      font-family: $helvetica, sans-serif;
+      font-size: 18px;
+      color: #bebebe;
+      text-transform: uppercase;
+      font-weight: bold;
+      span{
+        font-family: $freight, sans-serif;
+        font-size: 20px;
+        position: relative;
+        top: -2px;
+        font-weight: normal;
+      }
+    }
+  }
+}
