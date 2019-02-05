@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    // custom select
+
 var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
@@ -70,3 +74,39 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+// add active class for panel item and show/hide dashboard
+
+    const panelItems = document.getElementsByClassName('panel-item');
+    const projectBlockDisplay = document.querySelector('.projects-block').style;
+    const togglePanel = document.querySelector('.toggle-panel');
+    const toggleItems = togglePanel.getElementsByClassName('toggle-item');
+    for (let item of panelItems){
+        item.addEventListener("click", function (e) {
+            for (let item of panelItems) {
+                if (!item.classList.contains('logout')) {
+                    item.classList.remove('panel-active');
+                }
+            }
+            if (this.classList.contains('board')) {
+                projectBlockDisplay.display = 'flex';
+                togglePanel.style.display = 'flex';
+            } else {
+                projectBlockDisplay.display = 'none';
+                togglePanel.style.display = 'none';
+            }
+        });
+    }
+for (let item of toggleItems){
+    item.addEventListener('click', function (e) {
+        if (this.classList.contains('toggle-item-active')){
+            return false
+        } else{
+            for (let item of toggleItems){
+                item.classList.remove('toggle-item-active');
+            }
+            this.classList.add('toggle-item-active');
+        }
+    });
+}
+});

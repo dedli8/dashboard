@@ -7,12 +7,12 @@ background-color: #f1f1f1;
   border: solid #dcdcdc;
   border-width: 1px 0 1px 0;
   .toggle-item{
+    cursor: pointer;
     font-size: 24px;
     display: inline-block;
     vertical-align: top;
     background-color: #f8f8f8;
     padding: 27px 70px 27px 90px;
-    //width: 268px;
       position: relative;
 text-align: center;
   }

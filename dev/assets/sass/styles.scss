@@ -12,6 +12,7 @@ body{
     display: flex;
     max-width: 1580px;
     margin: 0 auto;
+    min-width: 1024px;
     //padding: 0 2%;
     min-height: 600px;
   }
@@ -55,6 +56,30 @@ body{
 }
 .offline:before {
   background-color: #c5c5c5;
+}
+.archive-wrap{
+  padding: 20px 10px;
+  color: #4b4b4b;
+  font-size: 18px;
+  font-family: $freight, sans-serif;
+  @include media($width-mid){
+    padding: 20px 30px;
+  }
+  .archive{
+    cursor: pointer;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: -17px;
+      width: 6px;
+      height: 6px;
+      border: solid #afafaf;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+    }
+  }
 }
 @import "../../components/adminpanel/_adminpanel";
 @import "../../components/dashboard/_dashboard";

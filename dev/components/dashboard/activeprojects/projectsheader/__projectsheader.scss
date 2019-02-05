@@ -25,6 +25,10 @@
     text-align: center;
     line-height: 38px;
     margin-left: 10px;
+    cursor: pointer;
+    &:hover{
+      background-color: #e40c25;
+    }
   }
   .project-header-search {
     height: 40px;
