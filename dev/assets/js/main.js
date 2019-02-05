@@ -112,6 +112,7 @@ for (let item of toggleItems){
 });
 
 // initiate custom scrollbar
-$(function(){
-    $('.scrollbar-dynamic').scrollbar();
+
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-dynamic').scrollbar();
 });
