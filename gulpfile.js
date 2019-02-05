@@ -10,9 +10,9 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('server', function(){
     connect.server({
-        root: 'build/',
+        root: 'dist/',
         livereload: true,
-        port: 3000
+        port: 7000
     });
 });
 
@@ -26,7 +26,7 @@ gulp.task('html', function(){
         .pipe(rename(function(path){
             path.dirname = ''
         }))
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('dist/'))
         .pipe(connect.reload());
 });
 
@@ -35,7 +35,7 @@ gulp.task('css', function(){
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('dist/'))
         .pipe(connect.reload());
 });
 
@@ -44,11 +44,11 @@ gulp.task('move', function(){
         .pipe(rename(function(path){
             path.dirname = ''
         }))
-        .pipe(gulp.dest('build/img/'));
+        .pipe(gulp.dest('dist/img/'));
     gulp.src('dev/assets/fonts/*.*')
-        .pipe(gulp.dest('build/fonts/'));
+        .pipe(gulp.dest('dist/fonts/'));
     gulp.src('dev/assets/js/*.js')
-        .pipe(gulp.dest('build/js/'));
+        .pipe(gulp.dest('dist/js/'));
 });
 gulp.task('sprite', function(){
     var sprite = gulp.src('dev/assets/img/sprite/*.*')
@@ -59,13 +59,13 @@ gulp.task('sprite', function(){
             algorithm: 'binary-tree'
         }));
 
-        sprite.img.pipe(gulp.dest('build/img'));
+        sprite.img.pipe(gulp.dest('dist/img'));
         sprite.css.pipe(gulp.dest('dev/assets/scss/includes'));
 });
 gulp.task('pref', () =>
-gulp.src('build/styles.css')
+gulp.src('dist/styles.css')
     .pipe(autoprefixer({ grid: true, browsers: ['>1%']  }))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('dist'))
 );
 
 gulp.task('default', function(){
