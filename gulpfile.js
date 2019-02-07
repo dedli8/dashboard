@@ -64,7 +64,7 @@ gulp.task('sprite', function(){
 });
 gulp.task('pref', () =>
 gulp.src('dist/styles.css')
-    .pipe(autoprefixer({ grid: true, browsers: ['>1%']  }))
+    .pipe(autoprefixer({ grid: true, browsers: ['> 1%', 'last 2 versions', 'firefox >= 4', 'safari 7', 'safari 8', 'IE 8', 'IE 9', 'IE 10', 'IE 11']  }))
     .pipe(gulp.dest('dist'))
 );
 
